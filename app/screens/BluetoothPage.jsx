@@ -9,7 +9,7 @@ const BluetoothPage = ({children}) => {
      <BasePage>
         
         <BluetoothPageContent>
-            
+            {children}
         </BluetoothPageContent>
                 
     </BasePage>
