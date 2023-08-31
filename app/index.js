@@ -5,6 +5,7 @@ import BasePage from './screens/BasePage'
 import HomePage from './screens/HomePage'; 
 import BluetoothPage from './screens/BluetoothPage';
 import Navigation from './Navigation/Navigation';
+import NavBar from './components/NavBar';
 
 
 
@@ -14,6 +15,6 @@ export default App =() => {
         // <BluetoothPage>
         // {/* TODO: Replace here with navigation */}
         // </BluetoothPage>
-        <Navigation />
+        <HomePage></HomePage>
     )
 };

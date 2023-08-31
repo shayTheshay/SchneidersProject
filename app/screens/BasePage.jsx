@@ -2,7 +2,7 @@ import React from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native';
 import NavBar from '../components/NavBar';
 import PageBottom from '../components/PageBottom';
-import { View } from 'react-native-web';
+import { View } from 'react-native';
 
 
 export default function BasePage({ children }) {

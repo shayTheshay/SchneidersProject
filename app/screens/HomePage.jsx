@@ -1,5 +1,4 @@
 import React from "react";
-import { Text } from "react-native-web";
 import HomePageContent from "../components/content/HomePageContent"
 import BasePage from "./BasePage";
 

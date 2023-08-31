@@ -1,5 +1,4 @@
 import { View, Image, Text, StyleSheet } from "react-native";
-import BluetoothSymbol from "../BluetoothComponent";
 
 
  const BluetoothPageContent = ({children}) => {

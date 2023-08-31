@@ -1,6 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
-import { Image, View } from "react-native";
+import { StyleSheet, Image, View } from "react-native";
 
 const BlutoothSymbol = ()=> {
     return(
