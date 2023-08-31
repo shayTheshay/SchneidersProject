@@ -15,6 +15,6 @@ export default App =() => {
         // <BluetoothPage>
         // {/* TODO: Replace here with navigation */}
         // </BluetoothPage>
-        <HomePage></HomePage>
+        <Navigation></Navigation>
     )
 };

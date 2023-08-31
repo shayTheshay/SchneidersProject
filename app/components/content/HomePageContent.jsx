@@ -5,8 +5,8 @@ import BluetoothSymbol from "../BluetoothComponent";
  const HomePageContent = ({children}) => {
     return (
         <View>
-            <View style={styles.words}>
-                <Text>Hey! please wait a second for the bluetooth to search for the controllers</Text>
+            <View style={styles.container}>
+                <Text style={styles.words}>Hey! please wait a second for the bluetooth to search for the controllers</Text>
             </View>
             <BluetoothSymbol></BluetoothSymbol>
         </View>
@@ -19,12 +19,13 @@ const styles = StyleSheet.create({
 
     container:{
         alignContent:'center',
-        alignItems:'center'
+        alignItems:'center',
 
     },
     words:{
         textAlign:'center',
-        paddingBottom:20
+        paddingBottom:20,
+        padding: 20,
     }
 
 })

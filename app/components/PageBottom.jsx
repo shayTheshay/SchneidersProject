@@ -13,8 +13,7 @@ const PageBottom = () => {
 const styles = StyleSheet.create({
     icon: {
         flex: 1,
-        padding: 2,
-        paddingRight: 4,
+        paddingRight: 3,
         alignItems: 'flex-end',
         alignSelf: 'flex-end',
         width:'100vm'
