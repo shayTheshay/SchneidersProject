@@ -9,6 +9,7 @@ import BluetoothSymbol from "../BluetoothComponent";
                 <Text style={styles.words}>Hey! please wait a second for the bluetooth to search for the controllers</Text>
             </View>
             <BluetoothSymbol></BluetoothSymbol>
+            
         </View>
     )
 }
