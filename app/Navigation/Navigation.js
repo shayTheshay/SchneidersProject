@@ -6,6 +6,7 @@ import { Header, createStackNavigator } from '@react-navigation/stack';
 import BluetoothPage from '../screens/BluetoothPage';
 import HomePage from '../screens/HomePage';
 import routes from './Routing'
+import Menucomponent from '../components/MenuComponent'
 
 
 function handleMenuPress(){
@@ -26,12 +27,7 @@ const Navigation = () => {
           headerTitle: Stack.name,
           headerLeft:() =>(
           <View style={styles.container}>
-              <TouchableOpacity onPress={handleMenuPress}>
-                <Image
-                  source={require('../assets/menu.png')}
-                    style={{ width: 30, height: 30 }}
-                  />
-              </TouchableOpacity>
+            <Menucomponent/>
           </View>
           
           ),
