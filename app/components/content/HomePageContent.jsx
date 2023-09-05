@@ -1,14 +1,16 @@
 import { View, Image, Text, StyleSheet } from "react-native";
 import BluetoothSymbol from "../BluetoothComponent";
+import { Button } from "react-native";
 
 
  const HomePageContent = ({children}) => {
     return (
-        <View>
-            <View style={styles.container}>
-                <Text style={styles.words}>Hey! please wait a second for the bluetooth to search for the controllers</Text>
-            </View>
-            <BluetoothSymbol></BluetoothSymbol>
+        <View style={styles.container}>
+            <Text style={styles.words}>Now </Text>
+                
+
+
+            <Button title="shalom"></Button>
             
         </View>
     )
@@ -21,12 +23,19 @@ const styles = StyleSheet.create({
     container:{
         alignContent:'center',
         alignItems:'center',
+        flex:1,
 
     },
     words:{
         textAlign:'center',
-        paddingBottom:20,
+        paddingBottom:40,
         padding: 20,
+    },
+
+    buttonstyle:{
+        flex:1,
+        alignSelf:'flex-end',
+
     }
 
 })

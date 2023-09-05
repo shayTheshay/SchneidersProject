@@ -7,7 +7,7 @@ const handleMenuPress = () => {
 }
 return (
 
-<View>
+<View style={styles.menu}>
     <TouchableOpacity onPress={handleMenuPress}>
     <Image
             source={require('../assets/menu.png')}
@@ -17,6 +17,16 @@ return (
 
 </View>)
 }
+
+const styles = StyleSheet.create({
+    menu: {
+        flex: 1,
+        alignContent:'center',
+        alignItems:'center',
+        alignSelf:'center',
+    },
+});
+
 
 
 

@@ -1,12 +1,11 @@
 // Navigation.js
 import React from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native'
-import { NavigationContainer } from '@react-navigation/native';
 import { Header, createStackNavigator } from '@react-navigation/stack';
 import BluetoothPage from '../screens/BluetoothPage';
 import HomePage from '../screens/HomePage';
-import routes from './Routing'
 import Menucomponent from '../components/MenuComponent'
+import { SafeAreaView } from 'react-native';
 
 
 function handleMenuPress(){
@@ -21,16 +20,28 @@ const Navigation = () => {
       initialRouteName="Home"
       screenOptions={
         {
+          headerShown: true,
           headerStyle :{
-            backgroundColor:'#90d6e0'
+            backgroundColor:'#90d6e0',
+            height: 65,
+
+            
           },
           headerTitle: Stack.name,
           headerLeft:() =>(
-          <View style={styles.container}>
+          <SafeAreaView style={styles.container}>
             <Menucomponent/>
-          </View>
+          </SafeAreaView>
           
           ),
+          headerTitleStyle:{
+            paddingBottom:1,
+            alignContent:'center',
+            alignItems:'center',
+            alignSelf:'center',
+            flex:1,
+          }
+          
           
         }
       }
@@ -62,7 +73,14 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignSelf:'center',
     alignContent:'center',
-    padding: 15,
+    paddingBottom: 40,
+    paddingLeft: 15,
+    flex:1,
+  },
+
+  text:{
+    paddingBottom:20,
+    flex:1,
   }
 });
 

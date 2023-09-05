@@ -16,6 +16,8 @@ import { Image, StyleSheet, View } from 'react-native';
 const styles = StyleSheet.create({
     IconContainer: {
         flex: 1,
+        flexDirection:'column-reverse',
+        padding: 5,
     },
 });
 
