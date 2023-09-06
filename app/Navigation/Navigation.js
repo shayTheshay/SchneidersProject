@@ -8,9 +8,19 @@ import Menucomponent from '../components/MenuComponent'
 import { SafeAreaView } from 'react-native';
 
 
-function handleMenuPress(){
+const CustomHeaderTitle=({children})=>{
 
-}
+  return(
+    <View style={styles.container}>
+      <Text>{children}</Text>
+    </View>
+
+  );
+
+
+};
+
+
 
 const Stack = createStackNavigator();
 
@@ -23,11 +33,11 @@ const Navigation = () => {
           headerShown: true,
           headerStyle :{
             backgroundColor:'#90d6e0',
-            height: 65,
+            height: 55,
 
             
           },
-          headerTitle: Stack.name,
+          headerTitle: CustomHeaderTitle,
           headerLeft:() =>(
           <SafeAreaView style={styles.container}>
             <Menucomponent/>
@@ -50,14 +60,15 @@ const Navigation = () => {
         <Stack.Screen 
         name="Home" 
         component={HomePage} 
-        
+        headerTitle="HOmi"
+
         />
 
 
         <Stack.Screen 
         name="Blutooth" 
         component={BluetoothPage} 
-        
+        headerTitle="BLE"
         
         />
       
@@ -73,13 +84,13 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignSelf:'center',
     alignContent:'center',
-    paddingBottom: 40,
+    paddingBottom: 50,
     paddingLeft: 15,
     flex:1,
   },
 
   text:{
-    paddingBottom:20,
+    
     flex:1,
   }
 });

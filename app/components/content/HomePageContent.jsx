@@ -3,14 +3,14 @@ import BluetoothSymbol from "../BluetoothComponent";
 import { Button } from "react-native";
 
 
- const HomePageContent = ({children}) => {
+ const HomePageContent = ({children, pressable}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.words}>Now </Text>
                 
 
 
-            <Button title="shalom"></Button>
+            <Button title="Please Press To Search A Bluetooth Connection" onPress={pressable}></Button>
             
         </View>
     )
