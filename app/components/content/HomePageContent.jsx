@@ -1,27 +1,38 @@
-import { View, Image, Text, StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet, Platform } from "react-native";
 import BluetoothSymbol from "../BluetoothComponent";
 import { Button } from "react-native";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useNavigation } from '@react-navigation/native';
 
+
+
  const HomePageContent = ({ }) => {
-    const [shouldShow, setShouldShow] = useState(true);
+    const [shouldShow , setShouldShow] = useState(true);
 
     const navigation = useNavigation();
 
     const pressable = () => {
+     /*   useEffect(() => {
+            
+        })
+*/
+
         if(shouldShow  == true)
             setShouldShow(!shouldShow);
-        
+
+            
+
             navigation.navigate('Bluetooth', {screen: 'Bluetooth'});
             
+
+
       };
     
        
     return (
         <View style={styles.container}>
             <View style ={ styles.container}>
-                <Text style={styles.words}>Searching for a controller </Text>
+                <Text style={styles.words}>Searching for a controller</Text>
             </View>
             <View style={styles.BluetoothPlacement}>
                 {shouldShow ? null : <BluetoothSymbol/>}
@@ -59,7 +70,7 @@ const styles = StyleSheet.create({
         flex:1,
         alignSelf:'center',
         alignContent: 'center',
-        paddingHorizontal:10,
+        paddingHorizontal:30,
     },
     BluetoothPlacement:{
         alignContent:'center',

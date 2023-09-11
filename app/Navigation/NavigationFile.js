@@ -10,7 +10,7 @@ import Bluetooth from '../screens/BluetoothPage';
 const CustomHeaderTitle=({children})=>{
 
   return(
-    <View style={styles.container}>
+    <View style={styles.text}>
       <Text>{children}</Text>
     </View>
 
@@ -36,20 +36,7 @@ const Navigation = (props) => {
 
         },
         headerTitle: CustomHeaderTitle,
-        headerLeft:() =>(
-        <SafeAreaView style={styles.container}>
-          <Menucomponent/>
-        </SafeAreaView>
-
-        ),
-        headerTitleStyle:{
-          paddingBottom:1,
-          alignContent:'center',
-          alignItems:'center',
-          alignSelf:'center',
-          flex:1,
-        }
-
+        headerTitleAlign:'center',
 
       }
     }
@@ -87,7 +74,6 @@ const styles = StyleSheet.create({
   },
 
   text:{
-    
     flex:1,
   }
 });
