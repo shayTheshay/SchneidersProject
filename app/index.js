@@ -1,20 +1,14 @@
 import React from 'react'
-import { View, Text, StyleSheet} from 'react-native';
-import { useRouter, Stack } from 'expo-router';
-import BasePage from './screens/BasePage'
-import HomePage from './screens/HomePage'; 
-import BluetoothPage from './screens/BluetoothPage';
-import Navigation from './Navigation/Navigation';
-import NavBar from './components/NavBar';
+import Navigation from './Navigation/NavigationFile';
+import { NavigationContainer } from '@react-navigation/native';
 
 
 
 
 export default App =() => {
     return(
-        // <BluetoothPage>
-        // {/* TODO: Replace here with navigation */}
-        // </BluetoothPage>
-        <Navigation></Navigation>
+        <NavigationContainer independent = {true}>
+            <Navigation/>
+        </NavigationContainer>
     )
 };

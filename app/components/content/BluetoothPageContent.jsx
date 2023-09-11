@@ -4,7 +4,7 @@ import { View, Image, Text, StyleSheet } from "react-native";
  const BluetoothPageContent = ({children}) => {
     return (
         <View>
-            <Text>Hekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkijkhh</Text>
+            <Text>V for victory</Text>
         </View>
     )
 }

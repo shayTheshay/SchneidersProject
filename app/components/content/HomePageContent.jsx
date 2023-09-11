@@ -1,22 +1,40 @@
 import { View, Image, Text, StyleSheet } from "react-native";
 import BluetoothSymbol from "../BluetoothComponent";
 import { Button } from "react-native";
+import React, {useState} from "react";
+import { useNavigation } from '@react-navigation/native';
 
+ const HomePageContent = ({ }) => {
+    const [shouldShow, setShouldShow] = useState(true);
 
- const HomePageContent = ({children, pressable}) => {
+    const navigation = useNavigation();
+
+    const pressable = () => {
+        if(shouldShow  == true)
+            setShouldShow(!shouldShow);
+        
+            navigation.navigate('Bluetooth', {screen: 'Bluetooth'});
+            
+      };
+    
+       
     return (
         <View style={styles.container}>
-            <Text style={styles.words}>Now </Text>
-                
-
-
-            <Button title="Please Press To Search A Bluetooth Connection" onPress={pressable}></Button>
+            <View style ={ styles.container}>
+                <Text style={styles.words}>Searching for a controller </Text>
+            </View>
+            <View style={styles.BluetoothPlacement}>
+                {shouldShow ? null : <BluetoothSymbol/>}
+            </View>
             
+            <View style={styles.buttonstyle}>
+                <Button 
+                title="Please Press To Search For A Bluetooth Connection" 
+                onPress={pressable}></Button>
+            </View>
         </View>
     )
 }
-
-
 
 const styles = StyleSheet.create({
 
@@ -24,18 +42,29 @@ const styles = StyleSheet.create({
         alignContent:'center',
         alignItems:'center',
         flex:1,
+        alignSelf:'center',
+        justifyContent: 'center',
 
     },
     words:{
         textAlign:'center',
         paddingBottom:40,
         padding: 20,
+        fontWeight:'bold',
+        fontSize:25,
+        flex:1,
     },
 
     buttonstyle:{
         flex:1,
-        alignSelf:'flex-end',
-
+        alignSelf:'center',
+        alignContent: 'center',
+        paddingHorizontal:10,
+    },
+    BluetoothPlacement:{
+        alignContent:'center',
+        paddingBottom: 25,
+        flex:1,
     }
 
 })

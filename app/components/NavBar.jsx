@@ -15,29 +15,7 @@ const NavBar = ({ className }) => {
 </View>)
 }
 
-/*
-    return <Stack.Screen
-        options={{
-            headerShadowVisible: false,
-            headerTitle: () => (
-            <View style= {styles.headerTitleContainer}>
-                <View style= {styles.menu}>
-                    <MenuTouch></MenuTouch>
-                </View>
-            
 
-                <View style={ styles.titleText }>
-                    <Text>Home Page</Text>
-                </View>
-            </View>
-            ),
-            headerBackground: () => (
-            <View 
-                style={styles.title}>
-            </View>),
-        }}
-    />
-*/
 
 
 const styles = StyleSheet.create({
