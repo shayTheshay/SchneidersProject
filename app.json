@@ -1,5 +1,6 @@
 {
   "expo": {
+    "plugins": ["@config-plugins/react-native-ble-plx"],
     "scheme": "acme",
     "web": {
       "bundler": "metro"
